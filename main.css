@@ -1,0 +1,326 @@
+
+
+.container-fluid {
+    display: flex;
+    margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+    .title {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .title {
+        display: none;
+    }
+}
+
+#skin, #card, #buddy, #spray {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(3, 3, 3, 0.208);
+    border-radius: 100%;
+    border: none;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn img {
+    width: 40px;
+}
+
+.overlay-img {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.main-img {
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover .overlay-img {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: thinfont;
+    src: url(dinnextw1g_light.otf);
+}
+
+@font-face {
+    font-family: valofont;
+    src: url(Valorant\ Font.ttf);
+}
+
+@font-face {
+    font-family: boldfont;
+    src: url(Tungsten-Bold.ttf);
+}
+
+body {
+    background: linear-gradient(rgba(42, 65, 80, 0.7), rgba(32, 51, 58, 0.7)), url('img/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: rgb(5, 5, 5);
+    font-family: thinfont;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: valofont;
+}
+
+.navbar {
+    background-color: #dc3d4b;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    height: 80px;
+    margin-bottom: 0px;
+}
+
+.navbar a {
+    color: #e6d0d7;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+    font-family: semiboldfont;
+}
+
+.navbar a:hover {
+    background-color: rgb(181, 65, 65);
+}
+
+.navbar img {
+    height: 60px;
+    width: 130px;
+    border-radius: 100%;
+}
+
+@media (max-width: 730px) {
+    #search button {
+        display: none;
+    }
+    #search input {
+        display: none;
+    }
+    .navbar img {
+        height: 70px;
+        width: 90px;
+    }
+    .title {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 90px);
+    max-width: 100%;
+}
+
+.shop::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.115);
+    color: rgb(234, 234, 234);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+    border: none;
+    flex: 1 0 200px;
+    max-width: 500px;
+    border: solid 2px;
+    border-radius: 0%;
+    border-color: rgba(199, 204, 207, 0.57);
+}
+
+@media (max-width: 992px) {
+    .card {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, transparent, #51a0a2);
+}
+
+.product {
+    max-height: 250px;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .product {
+    transform: scale(1.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 44px;
+    font-family: boldfont;
+    color: rgb(227, 227, 227);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    border: solid 2px;
+    border-radius: 0%;
+    border-color: #51a0a2;
+}
+
+.cart-section {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    height: calc(100vh - 90px);
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@media (max-width: 992px) {
+    .cart-section {
+        position: relative;
+        top: auto;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-section {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+}
+
+button {
+    font-size: 14px;
+}
+
+h1 {
+    font-family: valofont;
+    color: black;
+}
+
+#skin img, #card img, #buddy img, #spray img {
+    width: 40px;
+}
+
+#skin {
+    background-color: rgba(3, 3, 3, 0.208);
+    border-radius: 100%;
+    border: none;
+    margin-right: 20px;
+}
+
+#card {
+    background-color: rgba(3, 3, 3, 0.208);
+    border-radius: 100%;
+    border: none;
+    margin-right: 20px;
+}
+
+#buddy {
+    background-color: rgba(3, 3, 3, 0.208);
+    border-radius: 100%;
+    border: none;
+    margin-right: 20px;
+}
+
+#spray {
+    background-color: rgba(3, 3, 3, 0.208);
+    border-radius: 100%;
+    border: none;
+}
+
+.btn {
+    font-family: valofont;
+    font: 10px;
+    background-color: #dc3d4aba;
+    border-color: #7d1821;
+    color: white;
+}
+
+.btn:hover {
+    font-family: valofont;
+    font: 10px;
+    background-color: #841f279e;
+    border-color: #7d1821;
+}

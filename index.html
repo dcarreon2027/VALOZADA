@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALOZADA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="d-flex flex-column">
+        <div class="navbar">
+            <h2 class="title">VALOZADA</h2>
+
+            <form class="d-flex mx-auto" style="width: 50%;" onsubmit="return false;" id="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="button">Search</button>
+            </form>
+
+                <a href="about.html"><img src="img/person.png" style="width: 60px;" alt="About"></a>
+                <a href="index.html"><img src="img/cartblack.png" style="width: 60px;" alt="Shop"></a>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="shop">
+                    <div class="container mt-3">
+                        <button class="btn btn-primary" id="skin" onclick="Skins()">
+                            <img src="img/skinwhite.png" alt="Skins">
+                            <img class="overlay-img" src="img/skingreen.png" alt="Skins">
+                        </button>
+                        <button class="btn btn-primary" id="card" onclick="PCards()">
+                            <img src="img/cardwhite.png" alt="Cards">
+                            <img class="overlay-img" src="img/cardgreen.png" alt="Cards">
+                        </button>
+                        <button class="btn btn-primary" id="buddy" onclick="Buddies()">
+                            <img src="img/buddywhite.png" alt="Buddies">
+                            <img class="overlay-img" src="img/buddygreen.png" alt="Buddies">
+                        </button>
+                        <button class="btn btn-primary" id="spray" onclick="Sprays()">
+                            <img src="img/spraywhite.png" alt="Sprays">
+                            <img class="overlay-img" src="img/spraygreen.png" alt="Sprays">
+                        </button>
+                    </div>
+                    
+
+                    <!-- shop -->
+                    <div class="container-xl">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle1">MYSTBLOOM PHANTOM</h5>
+                                        <img src="img/Mystbloom_Phantom.png" class="product card-img-top" alt="Product" id="img1">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price1">Ⓥ 2175</p>
+                                        <button class="btn btn-primary me-2" id="item1" data-name="Mystbloom Phantom" data-price="2175" data-img="img/Mystbloom_Phantom.png" onclick="addItem('Mystbloom Phantom', 2175, 'img/Mystbloom_Phantom.png')">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle3">ONI VANDAL</h5>
+                                        <img src="img/Oni_Vandal.png" class="product card-img-top" alt="Product" id="img3">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price3">Ⓥ 1775</p>
+                                        <button class="btn btn-primary me-2" id="item3" data-name="Oni Vandal" data-price="1775" data-img="img/Oni_Vandal.png" onclick="addItem('Oni Vandal', 1775, 'img/Oni_Vandal.png')">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle5">REAVER PHANTOM</h5>
+                                        <img src="img/Reaver_Phantom.png" class="product card-img-top" alt="Product" id="img5">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price5">Ⓥ 1775</p>
+                                            <button class="btn btn-primary me-2" id="item5" data-name="Reaver Phantom" data-price="1775" data-img="img/Reaver_Phantom.png" onclick="addItem('Reaver Phantom', 1775, 'img/Reaver_Phantom.png')">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle7">SENTINELS OF LIGHT VANDAL</h5>
+                                        <img src="img/Sentinels_of_Light_Vandal.png" class="product card-img-top" alt="Product" id="img7">
+                                    </div>
+                                        <div class="card-footer d-flex justify-content-between align-items-center">
+                                            <p id="price7">Ⓥ 2175</p>
+                                            <button class="btn btn-primary me-2" id="item7" data-name="Sentinels of Light Vandal" data-price="2175" data-img="img/Sentinels_of_Light_Vandal.png" onclick="addItem('Sentinels of Light Vandal', 2175, 'img/Sentinels_of_Light_Vandal.png')">Add to Cart</button>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle2">MYSTBLOOM KUNAI</h5>
+                                        <img src="img/Mystbloom_Kunai.png" class="product card-img-top" alt="Product" id="img2">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price2">Ⓥ 4350</p>                                            
+                                            <button class="btn btn-primary me-2" id="item2" data-name="Mystbloom Kunai" data-price="4350" data-img="img/Mystbloom_Kunai.png" onclick="addItem('Mystbloom Kunai', 4350, 'img/Mystbloom_Kunai.png')">Add to Cart</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle4">ONIMARU KUNITSUNA</h5>
+                                        <img src="img/Onimaru_Kunitsuna.png" class="product card-img-top" alt="Product" id="img4">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price4">Ⓥ 4350</p>                                                
+                                            <button class="btn btn-primary me-2" id="item4" data-name="Onimaru Kunitsuna" data-price="4350" data-img="img/Onimaru_Kunitsuna.png" onclick="addItem('Onimaru Kunitsuna', 4350, 'img/Onimaru_Kunitsuna.png')">Add to Cart</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle6">REAVER KARAMBIT</h5>
+                                        <img src="img/Reaver_Karambit.png" class="product card-img-top" alt="Product" id="img6">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price6">Ⓥ 4350</p>                                                
+                                            <button class="btn btn-primary me-2" id="item6" data-name="Reaver Karambit" data-price="4350" data-img="img/Reaver_Karambit.png" onclick="addItem('Reaver Karambit', 4350, 'img/Reaver_Karambit.png')">Add to Cart</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="cardTitle8">RELIC STONE DAGGERS</h5>
+                                        <img src="img/Relic_Stone_Daggers.png" class="product card-img-top" alt="Product" id="img8">
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between align-items-center">
+                                        <p id="price8">Ⓥ 4350</p>                                                
+                                            <button class="btn btn-primary me-2" id="item8" data-name-name="Relic Stone Daggers" data-price="4350" data-img="img/Relic_Stone_Daggers.png" onclick="addItem('Relic Stone Daggers', 4350, 'img/Relic_Stone_Daggers.png')">Add to Cart</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="cart-section sticky-top">
+                    <h1>My Cart</h1>
+                    <button class="btn btn-danger" onclick="clearOrder()">CLEAR ORDER</button>
+                    <ul id="ulMyOrder" class="list-group"></ul>
+
+                    <!-- Delivery Form -->
+                    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="get" id="checkoutForm" class="p-3 thicker-card">
+                        <h1>Delivery Details</h1>
+                        <div class="mb-3">
+                            <label for="cust_name" class="form-label">Name</label>
+                            <input type="text" name="cust_name" id="cust_name" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cust_email" class="form-label">Email</label>
+                            <input type="email" name="cust_email" id="cust_email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cust_addr" class="form-label">Address</label>
+                            <input type="text" name="cust_addr" id="cust_addr" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="hidden" name="cust_order" id="cust_order">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="total_cost" class="form-label">Total Cost</label>
+                            <input type="text" id="total_cost" name="total_cost" class="form-control" readonly required>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-md btn-primary" id="placeOrderBtn">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- End of col-md-4 -->
+        </div> <!-- End of row -->
+    </div> <!-- End of container-fluid -->
+
+    <script src="main.js"></script>
+</body>
+</html>
